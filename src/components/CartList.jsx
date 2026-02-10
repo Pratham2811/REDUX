@@ -43,7 +43,7 @@ const CartList = ({ items }) => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => {
-                  dispatch(decreaseItemQuantity(item.id));
+                  dispatch(decreaseItemQuantity({productId:item.id}));
                 }}
                 className="w-7 h-7 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
               >
@@ -56,7 +56,7 @@ const CartList = ({ items }) => {
                 className="w-9 text-center border border-gray-200 text-sm py-0.5 focus:outline-none"
               />
               <button
-                onClick={() => dispatch(increaseItemQuantity(item.id))}
+                onClick={() => dispatch(increaseItemQuantity({productId:item.id}))}
                 className="w-7 h-7 flex items-center justify-center border border-gray-300 rounded-full hover:bg-gray-50"
               >
                 <Plus className="h-3 w-3" />
@@ -89,7 +89,7 @@ const CartList = ({ items }) => {
                 Save for later
               </button>
               <button
-                onClick={() => dispatch(removeItemFromCart(item.id))}
+                onClick={() => dispatch(removeItemFromCart({productId:item.id}))}
                 className="text-sm font-bold uppercase hover:text-blue-600 transition-colors"
               >
                 Remove

@@ -1,3 +1,4 @@
+import { createSlice } from "@reduxjs/toolkit";
 import { product } from "../../productApi";
 
 export const WISHLSIT_ADD_ITEM = "wishList/addItem";
@@ -28,3 +29,21 @@ export function wishListReducer(state = [], action) {
   }
   return state;
 }
+const findItem=(state,action)=>{
+  return state.find((item)=>item.productId===action.payload.productId)
+}
+const whishListSlice=createSlice({
+  name:"wishList",
+  initialState:[],
+  reducers:{
+    addToWishList(state,action){
+       const exsistItem=findItem(state,action)
+       if(exsistItem){
+        
+       }
+    },
+    removeFromWishList(state,action){
+
+    }
+  }
+})

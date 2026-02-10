@@ -60,7 +60,7 @@ const ProductList = ({ products, onAddToCart, onAddToWishlist }) => {
 
                 {/* THE BUTTON: Thick, Solid, Edge-to-Edge */}
                 <button
-                  onClick={() => dispatch(addItemToCart(p.id))}
+                  onClick={() => dispatch(addItemToCart({productId:p.id}))}
                   className="group relative w-full bg-black text-white py-5 overflow-hidden transition-all active:scale-[0.98]"
                 >
                   <div className="relative z-10 flex items-center justify-center gap-3 text-[11px] font-black uppercase tracking-[0.3em]">
