@@ -1,7 +1,6 @@
-import { createStore, combineReducers, compose } from "redux";
 import { productReducer } from "./slice/productListSlice";
 import cartReducer from "./slice/cartSlice";
-import { wishListReducer } from "./slice/wishListSlice";
+import wishListReducer from "./slice/wishListSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({

@@ -9,6 +9,7 @@ const Wishlist = () => {
   // Assuming a similar selector pattern to your previous components
 const wishListData=useSelector(selectWishlistItemsDetailed)
 
+console.log(wishListData);
 
   return (
     <div className="min-h-screen bg-slate-50">

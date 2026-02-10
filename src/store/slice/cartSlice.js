@@ -32,9 +32,8 @@ const cartSlice = createSlice({
     decreaseItemQuantity(state, action) {
       const exsistItemIndex = findItemIndex(state, action);
       state[exsistItemIndex].quantity -= 1;
-      if(state[exsistItemIndex].quantity===0){
-        state.splice(exsistItemIndex,1)
-
+      if (state[exsistItemIndex].quantity === 0) {
+        state.splice(exsistItemIndex, 1);
       }
     },
   },
@@ -45,5 +44,5 @@ export const {
   increaseItemQuantity,
   decreaseItemQuantity,
 } = cartSlice.actions;
-const cartReducer= cartSlice.reducer
-export default  cartReducer;
+const cartReducer = cartSlice.reducer;
+export default cartReducer;

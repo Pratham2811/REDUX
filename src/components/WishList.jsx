@@ -1,6 +1,6 @@
 import { Heart, Trash2 } from "lucide-react";
 import { useDispatch } from "react-redux";
-import { removeFromWishList } from "../../../store/slice/wishListSlice";
+import { removeFromWishList } from "../store/slice/wishListSlice"
 
 const WishlistList = ({ items, onRemove }) => {
 
@@ -41,7 +41,7 @@ const WishlistList = ({ items, onRemove }) => {
               <span className="font-semibold">₹{product.price}</span>
 
               <button
-                onClick={() =>dispatch(removeFromWishList(product.id))}
+                onClick={() =>dispatch(removeFromWishList({productId:product.id}))}
                 className="p-2 hover:bg-red-50 rounded"
               >
                 <Trash2 className="h-4 w-4 text-red-500" />

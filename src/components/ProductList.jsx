@@ -1,7 +1,7 @@
 import { ShoppingBag, Heart } from "lucide-react";
-import { addItemToCart } from "../../../store/slice/cartSlice";
+import { addItemToCart } from "../store/slice/cartSlice";
 import { useDispatch } from "react-redux";
-import { addToWishList } from "../../../store/slice/wishListSlice";
+import { addToWishList } from "../store/slice/wishListSlice";
 
 const ProductList = ({ products, onAddToCart, onAddToWishlist }) => {
   const dispatch = useDispatch();
@@ -38,7 +38,7 @@ const ProductList = ({ products, onAddToCart, onAddToWishlist }) => {
 
                 {/* THE ICON FIX: PURE WHITE HEART WITH SHADOW */}
                 <button
-                  onClick={() => dispatch(addToWishList(p.id))}
+                  onClick={() => dispatch(addToWishList({productId:p.id}))}
                   className="absolute top-5 right-5 z-20 transition-transform active:scale-75 hover:scale-110"
                 >
                   <Heart
